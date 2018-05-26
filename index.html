@@ -1,91 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  
-  <!--  Meta  -->
-  <meta charset="UTF-8" />
-  <title>My New Pen!</title>
-  <script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
-      <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false" type="text/javascript"></script> 
-      <script src="js/three.min.js"></script>
-      <script src="js/GSVPano.js"></script>
-      <script src="js/Hyperlapse.js"></script>
-      <script src="js/index.js"></script>
 
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
-  <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
-  <!--  Styles  -->
-  <link rel="stylesheet" href="css">
+    <!--  Meta  -->
+    <meta charset="UTF-8" />
+    <title>My New Pen!</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false" type="text/javascript"></script>
+    <script src="js/three.min.js"></script>
+    <script src="js/GSVPano.js"></script>
+    <script src="js/Hyperlapse.js"></script>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <!--  Styles  -->
+    <link rel="stylesheet" href="css">
 </head>
+
 <body>
-<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
-<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
- 
-<!-- Always shows a header, even in smaller screens. -->
-<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-  <header class="mdl-layout__header">
-    <div class="mdl-layout__header-row">
-      <!-- Title -->
-      <span class="mdl-layout-title">Theta</span>
-      <!-- Add spacer, to align navigation to the right -->
-      <div class="mdl-layout-spacer"></div>
-      <!-- Navigation. We hide it in small screens. -->
-      <nav class="mdl-navigation mdl-layout--large-screen-only">
-        <a class="mdl-navigation__link" href="about.html">About</a>
-        <a class="mdl-navigation__link" href="developers.html">Developers</a>
-      </nav>
+
+    <script src="js/index.js"></script>
+    <!-- Always shows a header, even in smaller screens. -->
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <header class="mdl-layout__header">
+            <div class="mdl-layout__header-row">
+                <!-- Title -->
+                <span class="mdl-layout-title">Theta</span>
+                <!-- Add spacer, to align navigation to the right -->
+                <div class="mdl-layout-spacer"></div>
+                <!-- Navigation. We hide it in small screens. -->
+                <nav class="mdl-navigation mdl-layout--large-screen-only">
+                    <a class="mdl-navigation__link" href="about.html">About</a>
+                    <a class="mdl-navigation__link" href="developers.html">Developers</a>
+                </nav>
+            </div>
+        </header>
+        <div class="mdl-layout__drawer">
+            <span class="mdl-layout-title">Theta</span>
+            <nav class="mdl-navigation">
+                <a class="mdl-navigation__link" href="about.html">About</a>
+                <a class="mdl-navigation__link" href="developers.html">Developers</a>
+            </nav>
+        </div>
+        <main class="mdl-layout__content">
+            <div class="page-content">
+                <!-- Your content goes here -->
+            </div>
+            <!--main content will go here-->
+            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+                Button
+            </button>
+            <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored">
+                <i class="material-icons">add</i>
+            </button>
+            <!--main content will go here-->
+
+
+
+
+            <div id="directions-panel"></div>
+            <div id="box" style="display:inline-flex;">
+                <div id="pano" style="margin-left:12px;"></div>
+                <div id="map" style="width: 400px; height: 400px; float: left; padding: 0;"></div>
+            </div>
+            <div id="controls" style="">
+            </div>
+            <div style="margin-left:35%;">
+                <div class="ui-block-b">
+                    <button id="play" class="ui-btn">Start</button>
+                </div>
+                <div class="ui-block-b">
+                    <button id="stop" class="ui-btn">Stop</button>
+                </div>
+                <div class="ui-block-b">
+                    <button id="next" class="ui-btn">Next</button>
+                </div>
+                <div class="ui-block-b">
+                    <button id="prev" class="ui-btn">Prev</button>
+                </div>
+                <div class="ui-block-b">
+                    <button id="load" class="ui-btn">new</button>
+                </div>
+            </div>
+
+        </main>
+
     </div>
-  </header>
-  <div class="mdl-layout__drawer">
-    <span class="mdl-layout-title">Title</span>
-    <nav class="mdl-navigation">
-      <a class="mdl-navigation__link" href="about.html">About</a>
-      <a class="mdl-navigation__link" href="developers.html">Developers</a>
-    </nav>
-  </div>
-  <main class="mdl-layout__content">
-    <div class="page-content"><!-- Your content goes here --></div>
-<!--main content will go here-->
-    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
-  Button
-</button>
-<button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored">
-  <i class="material-icons">add</i>
-</button>
-    <!--main content will go here-->
-
-
-
-   
-           <div id="directions-panel"></div>
-           <div id="box" style="display:inline-flex;">
-              <div id="pano" style="margin-left:12px;"></div>
-              <div id="map" style="width: 400px; height: 400px; float: left; padding: 0;"></div>
-           </div>
-           <div id="controls" style="">
-           </div>
-           <div style="margin-left:35%;">
-              <div class="ui-block-b"> 
-                 <button id="play" class="ui-btn">Start</button>
-              </div>
-              <div class="ui-block-b"> 
-                 <button id="stop" class="ui-btn">Stop</button>
-              </div>
-              <div class="ui-block-b"> 
-                 <button id="next" class="ui-btn">Next</button>
-              </div>
-              <div class="ui-block-b"> 
-                 <button id="prev" class="ui-btn">Prev</button>
-              </div>
-              <div class="ui-block-b"> 
-                 <button id="load" class="ui-btn">new</button>
-              </div>
-           </div>
-
-  </main>
-  
-</div>
 </body>
-
