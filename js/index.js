@@ -7,7 +7,8 @@ var speed = 50;
       ///////////////////////////////////////////////////////////hyperlapse//////////////////////////////////////////
          			hyperlapse = new Hyperlapse(document.getElementById('pano'), { //removed var b/c it restricted hyperlapse to this function
          				lookat: hyper.end,//new google.maps.LatLng(37.81409525128964,-122.4775045005249),
-         				width:925,
+                        width:1280,
+                        height:800,
          				zoom: 1,
 						fov:100,
 						offset:{x:20,y:50,z:90},
@@ -42,8 +43,10 @@ var speed = 50;
          			});
          			$( "#prev" ).click(function(e) {
          				hyperlapse.prev();
-         			});
-         				        
+                     });
+                     $( "#toggle" ).click(function(e) {
+                        $( "#map" ).toggle( );
+                     });    
          // ----------------------------Google Maps API stuff here...        		
          			$( "#load" ).click(function(e) {
          			var directions_service = new google.maps.DirectionsService();
