@@ -1,6 +1,5 @@
-# theta-AIS2018
-# Drill
-![alt text](Assets/drill.png)
+# THETA
+![alt text](theta300x225.png)
 
 ## Overview
 
