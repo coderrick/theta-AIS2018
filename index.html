@@ -52,12 +52,7 @@
                 <!-- Your content goes here -->
             </div>
             <!--main content will go here-->
-            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
-                Button
-            </button>
-            <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored">
-                <i class="material-icons">add</i>
-            </button>
+
             <!--main content will go here-->
 
 
@@ -68,25 +63,26 @@
                 <div id="pano" style="margin-left:12px;"></div>
                 <div id="map" style="width: 400px; height: 400px; float: left; padding: 0;"></div>
             </div>
-            <div id="controls" style="">
+
+
+            <div id="streetview-controls" style="position:absolute;right:50%;top:50px;">
+                <button id="play" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+                    start
+                </button>
+                <button id="stop" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+                    Stop
+                </button>
+                <button id="prev" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+                    prev
+                </button>
+                <button id="next" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+                    next
+                </button>
+                <button id="load" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+                    new
+                </button>
             </div>
-            <div style="margin-left:35%;">
-                <div class="ui-block-b">
-                    <button id="play" class="ui-btn">Start</button>
-                </div>
-                <div class="ui-block-b">
-                    <button id="stop" class="ui-btn">Stop</button>
-                </div>
-                <div class="ui-block-b">
-                    <button id="next" class="ui-btn">Next</button>
-                </div>
-                <div class="ui-block-b">
-                    <button id="prev" class="ui-btn">Prev</button>
-                </div>
-                <div class="ui-block-b">
-                    <button id="load" class="ui-btn">new</button>
-                </div>
-            </div>
+
 
         </main>
 
