@@ -45,7 +45,7 @@ var speed = 50;
          				hyperlapse.prev();
                      });
                      $( "#toggle" ).click(function(e) {
-                        $( "#map" ).toggle( );
+                        $( "#map" ).toggle();
                      });    
          // ----------------------------Google Maps API stuff here...        		
          			$( "#load" ).click(function(e) {
