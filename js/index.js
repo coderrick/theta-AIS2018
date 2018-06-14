@@ -39,7 +39,16 @@ var speed = 50;
          			});
          			$( "#next" ).click(function(e) {
          				hyperlapse.next();
-						hyperlapse.setFOV(10);
+						    //hyperlapse.setFOV(10);
+                hPoints = hyperlapse.getPoints();
+                hCanvas = hPoints[3].image;
+
+
+                var ctx = hCanvas.getContext("2d");
+                ctx.beginPath();
+                ctx.arc(100,75,50,0,2*Math.PI);
+                ctx.stroke();
+
          			});
          			$( "#prev" ).click(function(e) {
          				hyperlapse.prev();

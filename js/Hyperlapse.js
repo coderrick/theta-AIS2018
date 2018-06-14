@@ -179,6 +179,11 @@ var Hyperlapse = function(container, params) {
 	_scene = new THREE.Scene();
 	_scene.add( _camera );
 
+
+  this.getPoints = function(){
+  	return _h_points;
+  }
+
   // Check if we can use webGL
   var isWebGL = function () {
     try {
